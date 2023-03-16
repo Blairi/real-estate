@@ -8,11 +8,11 @@
 		<version>3.1.0-M1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.realestates</groupId>
-	<artifactId>realestates</artifactId>
+	<groupId>com.realestate</groupId>
+	<artifactId>realestate</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>realestates</name>
-	<description>System to manage real estates</description>
+	<name>realestate</name>
+	<description>System to manage real estate</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -39,12 +39,25 @@
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
-			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.tomcat.embed</groupId>
+    		<artifactId>tomcat-embed-jasper</artifactId>
+    		<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+    		<groupId>org.glassfish.web</groupId>
+    		<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>5.1.3</version>
 		</dependency>
 	</dependencies>
 

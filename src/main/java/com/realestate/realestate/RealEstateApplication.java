@@ -1,13 +1,13 @@
-package com.realestates.realestates;
+package com.realestate.realestate;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RealestatesApplication {
+public class RealEstateApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RealestatesApplication.class, args);
+		SpringApplication.run(RealEstateApplication.class, args);
 	}
 
 }
