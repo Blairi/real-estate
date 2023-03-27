@@ -7,3 +7,4 @@
 	<title>Real Estate</title>
 </head>
 <body>
+	<div class="container d-flex align-items-center vh-100" style="margin-top: 100px;">
