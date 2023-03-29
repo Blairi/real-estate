@@ -20,4 +20,10 @@ public class HomeController {
 	public String showPropertiesPage() {
 		return "properties";
 	}
+	
+	// TODO: remove this RequestMapping
+	@RequestMapping("/dashboard")
+	public String showDashboardPage() {
+		return "dashboard";
+	}
 }
