@@ -5,9 +5,11 @@ import java.time.LocalDate;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.Size;
 
 @Entity
+@Table(name="properties")
 public class Property {
 
 	@Id
@@ -17,7 +19,7 @@ public class Property {
 	private double price;
 
 	@Size(min = 10, message = "Enter atleast 10 characters")
-	private String desc;
+	private String description;
 	private Integer bedrooms;
 	private Integer wc;
 	private Integer parking;
@@ -34,7 +36,7 @@ public class Property {
 		this.id = id;
 		this.name = name;
 		this.price = price;
-		this.desc = desc;
+		this.description = desc;
 		this.bedrooms = bedrooms;
 		this.wc = wc;
 		this.parking = parking;
@@ -66,11 +68,11 @@ public class Property {
 	}
 
 	public String getDesc() {
-		return desc;
+		return description;
 	}
 
 	public void setDesc(String desc) {
-		this.desc = desc;
+		this.description = desc;
 	}
 
 	public Integer getBedrooms() {
@@ -107,7 +109,7 @@ public class Property {
 
 	@Override
 	public String toString() {
-		return "Property [id=" + id + ", name=" + name + ", price=" + price + ", desc=" + desc + ", bedrooms="
+		return "Property [id=" + id + ", name=" + name + ", price=" + price + ", desc=" + description + ", bedrooms="
 				+ bedrooms + ", wc=" + wc + ", parking=" + parking + ", created=" + created + "]";
 	}
 
