@@ -4,7 +4,7 @@
 		<main class="vh-100 w-100">
 			<h1>New property</h1>
 			<div class="d-flex justify-content-center">
-			<form class="w-50" method="POST" action="/api/propiedades">
+			<form class="w-50" method="POST" action="add-property">
   				<div class="form-group">
     				<label for="name">Name:</label>
     				<input type="text" class="form-control" id="name" name="name" required>
@@ -34,7 +34,7 @@
     				<input type="date" class="form-control" id="created" name="created" required>
   				</div>
   				<div class="d-flex justify-content-end mt-2">
-  					<button type="submit" class="btn btn-primary">Guardar</button>
+  					<button type="submit" class="btn btn-success">Publish</button>
   				</div
 			</form>
 			</div>
