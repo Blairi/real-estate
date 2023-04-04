@@ -1,5 +1,7 @@
 package com.realestate.realestate.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -24,5 +26,12 @@ public class PropertyController {
 	public String addNewProperty(ModelMap model, Property property) {
 		service.addProperty(property);
 		return "redirect:dashboard";
+	}
+	
+	@RequestMapping(value="/dashboard", method = RequestMethod.GET)
+	public String showDashboardPage(ModelMap model) {
+		List<Property> properties = service.getAllProperties();
+		model.put("properties", properties);
+		return "admin/dashboard";
 	}
 }
