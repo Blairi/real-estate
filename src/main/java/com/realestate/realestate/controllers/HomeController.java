@@ -21,9 +21,4 @@ public class HomeController {
 		return "properties";
 	}
 	
-	// TODO: remove this RequestMapping
-	@RequestMapping("/dashboard")
-	public String showDashboardPage() {
-		return "admin/dashboard";
-	}
 }
