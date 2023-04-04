@@ -5,7 +5,10 @@
 			<h1>Dashboard</h1>
 			<div class="mt-5 d-flex justify-content-end">
 				<a href="/add-property" class="btn btn-primary">Add property</a>
-			<div>
+			</div>
+			<c:forEach items="${properties}" var="property">
+				<p>${property.name}</p>
+			</c:forEach>
 		</main>
 		
 
