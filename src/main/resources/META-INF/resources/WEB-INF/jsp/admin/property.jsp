@@ -7,39 +7,46 @@
 				<a href="/dashboard" class="btn btn-danger">Back</a>
 			</div>
 			<div class="d-flex justify-content-center">
-			<form class="w-50" method="POST" action="add-property">
-  				<div class="form-group">
-    				<label for="name">Name:</label>
-    				<input type="text" class="form-control" id="name" name="name" required>
-  				</div>
-  				<div class="form-group">
-    				<label for="price">Price:</label>
-    				<input type="number" class="form-control" id="price" name="price" required>
-  				</div>
-  				<div class="form-group">
-    				<label for="description">Description:</label>
-    				<textarea class="form-control" id="description" name="description" rows="3" required></textarea>
-  				</div>
-  				<div class="form-group">
-    				<label for="bedrooms">Bedrooms:</label>
-    				<input type="number" class="form-control" id="bedrooms" name="bedrooms">
-  				</div>
-  				<div class="form-group">
-    				<label for="wc">WC:</label>
-    				<input type="number" class="form-control" id="wc" name="wc">
-  				</div>
-  				<div class="form-group">
-    				<label for="parking">Parking:</label>
-    				<input type="number" class="form-control" id="parking" name="parking">
-  				</div>
-  				<div class="form-group">
-    				<label for="created">Created:</label>
-    				<input type="date" class="form-control" id="created" name="created" required>
-  				</div>
-  				<div class="d-flex justify-content-end mt-2">
-  					<button type="submit" class="btn btn-success">Publish</button>
-  				</div
-			</form>
+				<form:form cssClass="w-50" method="POST" modelAttribute="property">
+				
+  					<fieldset class="mb-3">
+    					<form:label path="name">Name:</form:label>
+    					<form:input type="text" path="name" required="required" />
+  					</fieldset>
+  					
+  					<fieldset class="mb-3">
+    					<form:label path="price">Price:</form:label>
+    					<form:input type="number" path="price" required="required" />
+  					</fieldset>
+  					
+  					<fieldset class="mb-3">
+						<form:label path="description">Description</form:label>
+						<form:input type="text" path="description" required="required" />
+					</fieldset>
+					
+					<fieldset class="mb-3">
+    					<form:label path="wc">WC:</form:label>
+    					<form:input type="number" path="wc" required="required" />
+  					</fieldset>
+  					
+  					<fieldset class="mb-3">
+    					<form:label path="bedrooms">Bedrooms:</form:label>
+    					<form:input type="number" path="bedrooms" required="required" />
+  					</fieldset>
+  					
+  					<fieldset class="mb-3">
+    					<form:label path="parking">Parking:</form:label>
+    					<form:input type="number" path="parking" required="required" />
+  					</fieldset>
+  					
+  					<fieldset class="mb-3">
+						<form:label path="created">Created</form:label>
+						<form:input type="date" path="created" required="required" />
+					</fieldset>
+					
+					<input type="submit" class="btn btn-success"/>
+  					
+  				</form:form>
 			</div>
 			
 		</main>
