@@ -2,12 +2,15 @@ package com.realestate.realestate.service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.realestate.realestate.domain.Property;
 import com.realestate.realestate.repository.PropertyRepository;
+
+import jakarta.validation.Valid;
 
 @Service
 public class PropertyService {
@@ -29,6 +32,14 @@ public class PropertyService {
 
 	public List<Property> getAllProperties() {
 		return repository.findAll();
+	}
+	
+	public Optional<Property> findById(Integer id) {
+		return repository.findById(id);
+	}
+
+	public void updateProperty(Property property) {
+		repository.save(property);
 	}
 	
 }
