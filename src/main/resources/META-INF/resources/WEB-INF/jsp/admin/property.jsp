@@ -3,6 +3,9 @@
 	<%@ include file="../common/navbar.jspf" %>
 		<main class="vh-100 w-100">
 			<h1>New property</h1>
+			<div class="d-flex justify-content-start">
+				<a href="/dashboard" class="btn btn-danger">Back</a>
+			</div>
 			<div class="d-flex justify-content-center">
 			<form class="w-50" method="POST" action="add-property">
   				<div class="form-group">
