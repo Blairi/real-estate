@@ -31,13 +31,13 @@ public class Property {
 	}
 
 	public Property(int id, String name, double price, 
-			String desc, Integer bedrooms, Integer wc, 
+			String description, Integer bedrooms, Integer wc, 
 			Integer parking, LocalDate created) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.price = price;
-		this.description = desc;
+		this.description = description;
 		this.bedrooms = bedrooms;
 		this.wc = wc;
 		this.parking = parking;
@@ -68,12 +68,12 @@ public class Property {
 		this.price = price;
 	}
 
-	public String getDesc() {
+	public String getDescription() {
 		return description;
 	}
 
-	public void setDesc(String desc) {
-		this.description = desc;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public Integer getBedrooms() {
@@ -110,7 +110,7 @@ public class Property {
 
 	@Override
 	public String toString() {
-		return "Property [id=" + id + ", name=" + name + ", price=" + price + ", desc=" + description + ", bedrooms="
+		return "Property [id=" + id + ", name=" + name + ", price=" + price + ", description=" + description + ", bedrooms="
 				+ bedrooms + ", wc=" + wc + ", parking=" + parking + ", created=" + created + "]";
 	}
 
