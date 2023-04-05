@@ -6,9 +6,21 @@
 			<div class="mt-5 d-flex justify-content-end">
 				<a href="/add-property" class="btn btn-primary">Add property</a>
 			</div>
-			<c:forEach items="${properties}" var="property">
-				<p>${property.name}</p>
-			</c:forEach>
+			<div class="d-flex gap-3">
+				<c:forEach items="${properties}" var="property">
+					<div 
+						class="bg-secondary rounded text-light p-2 shadow w-25"
+					>
+						<h5>${property.name}</h5>
+						<p>Price: <span class="fw-bold">$${property.price}</span></p>
+						<p>Created: <span class="fw-bold">${property.created}</span></p>
+						<div class="d-flex gap-3 justify-content-end">
+							<a href="" class="btn btn-warning">Edit</a>
+							<a href="" class="btn btn-danger">Delete</a>
+						</div>
+					</div>
+				</c:forEach>
+			</div>
 		</main>
 		
 
