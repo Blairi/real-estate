@@ -42,4 +42,8 @@ public class PropertyService {
 		repository.save(property);
 	}
 	
+	public void deleteById(Integer id) {
+		repository.deleteById(id);
+	}
+	
 }

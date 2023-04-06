@@ -24,7 +24,9 @@ public class PropertyController {
 	private PropertyService service;
 	
 	@RequestMapping(value="add-property", method = RequestMethod.GET)
-	public String showNewPropertyPage() {
+	public String showNewPropertyPage(ModelMap model) {
+		Property property = new Property();
+		model.put("property", property);
 		return "admin/property";
 	}
 	
@@ -56,4 +58,11 @@ public class PropertyController {
 		model.put("properties", properties);
 		return "admin/dashboard";
 	}
+	
+	@RequestMapping(value = "delete-property", method = RequestMethod.GET)
+	public String deleteProperty(@RequestParam Integer id) {
+		service.deleteById(id);
+		return "redirect:dashboard";
+	}
+	
 }
