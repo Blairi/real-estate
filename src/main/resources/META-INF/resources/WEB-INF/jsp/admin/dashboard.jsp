@@ -16,7 +16,7 @@
 						<p>Created: <span class="fw-bold">${property.created}</span></p>
 						<div class="d-flex gap-3 justify-content-end">
 							<a href="/update-property?id=${property.id}" class="btn btn-warning">Edit</a>
-							<a href="" class="btn btn-danger">Delete</a>
+							<a href="/delete-property?id=${property.id}" class="btn btn-danger">Delete</a>
 						</div>
 					</div>
 				</c:forEach>
