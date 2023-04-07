@@ -20,7 +20,7 @@
 						<p>Bedrooms:<span class="fw-bold"> ${property.bedrooms}</span></p>
 					</div>
 					<div class="d-flex justify-content-end"> 
-						<a href="" class="btn btn-primary">More</a>
+						<a href="/property?id=${property.id}" class="btn btn-primary">More</a>
 					</div>
 				</div>
 			</c:forEach>
